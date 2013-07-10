@@ -24,6 +24,11 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<div id="content">
+        <?php if(!empty($message)): ?>
+        <div id="message" class="alert-box <?php echo $message_type; ?>">
+          <?php echo $message; ?>
+        </div>
+        <?php endif; ?>
 				Backbone Application will be here
 			</div>
 		</div>
