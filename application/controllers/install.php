@@ -13,12 +13,12 @@ class Install extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->model('DbScheme');
+
 		$data = array();
 		$data['message'] = "Application Installed";
 		$data['message_type'] = "success";
 		$this->load->view('home', $data);
 	}
-}
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+}
