@@ -28,9 +28,15 @@ class Dmtool extends CI_Controller {
     public function test(){
 
         $this->load->model('Node');
-        $this->Node->load(1);
+        $this->load->model('Creature');
+        $this->load->model('Character');
+        
+        $character = new Character;
+        $character->load(1);
 
-        var_dump($this->Node);
+        echo '<pre>';
+        var_dump($character);
+        echo '<pre>';
 
         $data = array();
         $data['output'] = "Application Installed";

@@ -1,6 +1,6 @@
 <?php
 
-class Node extends CI_Model {
+class Creature extends Node {
 
 
     /** 
@@ -8,15 +8,12 @@ class Node extends CI_Model {
      */
     function __construct()
     {
-        // Call the Model constructor
+        // Call the Node constructor
         parent::__construct();
-
-        // Load database
-        $this->load->database();
     }
 
     /**
-     * Load the Node object from DB
+     * Load the Creature object from DB
      * 
      * @param  int $nid The nid of the object
      * @return bool true if sucessfull False if fail
@@ -28,7 +25,12 @@ class Node extends CI_Model {
             return false;
         }
 
-        $query = $this->db->get_where('nodes', array('nid' => $nid), 1);
+        $this->db->select('*');
+        $this->db->from('nodes');
+        $this->db->join('creatures', 'nodes.nid = creatures.nid');
+        $this->db->where('nodes.nid', $nid); 
+
+        $query = $this->db->get();
 
         $row = $query->row();
 

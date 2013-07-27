@@ -6,7 +6,7 @@ define('SCHEME_STATUS_OUT_OF_DATE', 2);
 
 class DbScheme extends CI_Model {
 
-    var $version = '0.0.0.0';
+    var $version = '0.0.0.1';
 
     /** 
      * Verify if there's already a scheme installed
@@ -133,7 +133,7 @@ class DbScheme extends CI_Model {
                 ),
                 'primary' => 'variable',
             ),
-            'node' => array(
+            'nodes' => array(
                 'scheme' => array(
                     'nid' => array(
                          'type'           => 'INT',
