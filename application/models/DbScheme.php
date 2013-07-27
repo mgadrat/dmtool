@@ -75,7 +75,7 @@ class DbScheme extends CI_Model {
 
         // (temp)
         // delete scheme
-        $this->delete_current_scheme();
+        // $this->delete_current_scheme();
 
         // Load application scheme
         $tables = $this->get_scheme();
