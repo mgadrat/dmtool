@@ -27,11 +27,11 @@ class Dmtool extends CI_Controller {
      */
     public function test(){
 
-        $this->load->model('Node');
-        $this->load->model('Creature');
-        $this->load->model('Character');
+        $this->load->model('NodeModel');
+        $this->load->model('CreatureModel');
+        $this->load->model('CharacterModel');
         
-        $character = new Character;
+        $character = new CharacterModel;
         $character->load(1);
 
         echo '<pre>';

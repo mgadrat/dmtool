@@ -1,6 +1,6 @@
 <?php
 
-class Creature extends Node {
+class CreatureModel extends NodeModel {
 
 
     /** 
