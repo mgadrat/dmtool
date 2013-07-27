@@ -174,7 +174,7 @@ class DbScheme extends CI_Model {
                          'constraint' => 11, 
                          'unsigned'   => TRUE,
                     ),
-                    // level (characters and consters)
+                    // level (characters and Monsters)
                     'level' => array(
                          'type'       => 'INT',
                          'constraint' => 11, 
