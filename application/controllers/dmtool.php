@@ -21,6 +21,22 @@ class Dmtool extends CI_Controller {
     {
         $this->load->view('home');
     }
+
+    /**
+     * Static test
+     */
+    public function test(){
+
+        $this->load->model('Node');
+        $this->Node->load(1);
+
+        var_dump($this->Node);
+
+        $data = array();
+        $data['output'] = "Application Installed";
+        $this->load->view('home', $data);
+
+    }
 }
 
 /* End of file welcome.php */

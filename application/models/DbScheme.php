@@ -21,10 +21,6 @@ class DbScheme extends CI_Model {
         // Load dbforge && database
         $this->load->dbforge();
         $this->load->database();
-
-        // Create scheme
-        $this->create_scheme();
-        
     }
     
     /**
@@ -75,7 +71,7 @@ class DbScheme extends CI_Model {
      * 
      * @return bool TRUE on success FALSE on failure
      */
-    private function create_scheme() {
+    public function create_scheme() {
 
         // (temp)
         // delete scheme
@@ -114,10 +110,13 @@ class DbScheme extends CI_Model {
     /**
      * Returns a nested array representing the full
      * database scheme of the application
+     *
+     * This method is public so the other models
+     * can access the application scheme
      * 
      * @return Array Full db scheme of the application
      */
-    private function get_scheme() {
+    public function get_scheme() {
 
         return array(
             // System information and configuration

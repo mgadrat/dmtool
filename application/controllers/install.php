@@ -14,6 +14,7 @@ class Install extends CI_Controller {
     public function index()
     {
         $this->load->model('DbScheme');
+        $this->DbScheme->create_scheme();
 
         $data = array();
         $data['message'] = "Application Installed";

@@ -29,6 +29,11 @@
           <?php echo $message; ?>
         </div>
         <?php endif; ?>
+        <?php if(!empty($output)): ?>
+        <div id="output">
+          <?php echo $output; ?>
+        </div>
+        <?php endif; ?>
 				Backbone Application will be here
 			</div>
 		</div>
