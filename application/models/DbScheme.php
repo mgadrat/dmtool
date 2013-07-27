@@ -22,8 +22,6 @@ class DbScheme extends CI_Model {
         $this->load->dbforge();
         $this->load->database();
 
-
-        var_dump( $this->get_scheme_status() );
         // Create scheme
         $this->create_scheme();
         
@@ -206,6 +204,43 @@ class DbScheme extends CI_Model {
                          'constraint' => 11, 
                          'unsigned'   => TRUE,
                     ),
+                    // Ability Strengh
+                    'ab_str' => array(
+                         'type'       => 'INT',
+                         'constraint' => 11, 
+                         'unsigned'   => TRUE,
+                    ),
+                    // Ability Constitution
+                    'ab_con' => array(
+                         'type'       => 'INT',
+                         'constraint' => 11, 
+                         'unsigned'   => TRUE,
+                    ),
+                    // Ability Dexterity
+                    'ab_dex' => array(
+                         'type'       => 'INT',
+                         'constraint' => 11, 
+                         'unsigned'   => TRUE,
+                    ),
+                    // Ability Intelligence
+                    'ab_int' => array(
+                         'type'       => 'INT',
+                         'constraint' => 11, 
+                         'unsigned'   => TRUE,
+                    ),
+                    // Ability Wisdom
+                    'ab_wis' => array(
+                         'type'       => 'INT',
+                         'constraint' => 11, 
+                         'unsigned'   => TRUE,
+                    ),
+                    // Ability Charisma
+                    'ab_cha' => array(
+                         'type'       => 'INT',
+                         'constraint' => 11, 
+                         'unsigned'   => TRUE,
+                    ),
+
                 ),
             ), // end of creatures table
             'characters' => array(
